@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>用户登入</title>
+<script src="script/slide.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/logincheck.js"></script>
+<script type="text/javascript" src="js/jquery1.9.0.min.js"></script>
+<link rel="stylesheet" href="css/nojs.css" type="text/css" />
+<noscript>
+ <div align="center"><font size=+1 color="red">
+ <p>
+您好，您的浏览器禁用了脚本，为了保障浏览效果，
+建议您先开启脚本功能。
+</p>
+</font></div>
+<div id="black_overlay"></div> 
+<div id="load_content"> 
+<div style="float: left; padding-top: 12px; padding-left: 5px;"> 
+</div> 
+<div style="float: left; padding-top: 15px;">您好，您的浏览器禁用了脚本，请先开启此功能！</div> 
+</div> 
+</noscript>
+<style>
+.btn
+{
+	color:black;
+	border:solid ;
+	border-style:solid;
+	font-size:18px;
+	background:skyblue;
+	border-color:skyblue;
+	width:80%;
+	float:right;
+	font-weight:bold;
+}
+input.text
+{
+	color:black;
+	border-style:solid;
+	background:#C8F3F7;
+	border-color:skyblue;
+	font-weight:bold;
+	height:20px;
+}
+</style>
+</head>
+
+<body background="images/bgpic.jpg">
+
+<div align="center" style="margin-top: 110px">
+<table align="center">
+<tr>
+<td ><div id="focusViwer" style="filter:alpha(opacity:70); opacity:0.7;">
+<div id="imgADPlayer"></div> 
+<script> 
+PImgPlayer.addItem( "<a href=# target=_blank style=color:#000;text-decoration:none;>双 层 守 护</a>", "#", "images/1_small.jpg"); 		
+PImgPlayer.addItem( "<a href=# target=_blank style=color:#000;text-decoration:none;>跨 越 平 台</a>", "#", "images/2_small.jpg"); 		
+PImgPlayer.addItem( "<a href=# target=_blank style=color:#000;text-decoration:none;>简 单 快 捷</a>", "#", "images/3_small.jpg"); 		
+PImgPlayer.addItem( "<a href=# target=_blank style=color:#000;text-decoration:none;>触 手 可 得</a>", "#", "images/4_small.jpg"); 
+PImgPlayer.init( "imgADPlayer", 352, 352);   
+</script>
+</div>
+</td>
+<td>
+<table width="500" border="0" background="images/7C912A2FAF00.jpg" style="filter:alpha(opacity:50); opacity:0.5;">
+  <tr>
+    <td width="537" height="345">
+    <div align="center" >
+     <form name="form1" action="login" method="post">
+    <table border="0">
+    <tr>
+    <td colspan="2"><caption><font size="+2" color="green">★○系统登录○★</font></caption>
+    <br/><br/>
+    </td>
+    </tr>
+   	<tr>
+    <td width="100"><font size="+2">帐 号：</font></td><td><input class="text" type="text" name="account" id="account" onkeyup="checkaccount();" onblur="checkaccount();"/></td>
+    </tr>
+    <tr><td height="30" colspan="2"><font color="red"><span id="message"></span></font> </td></tr>
+    <tr>
+    <td width="100"><font size="+2">密 码：</font></td><td><input class="text" type="password" name="passwd" id="passwd" /> </td>
+    </tr>
+     <tr><td height="30" colspan="2"></td></tr>
+    <tr>
+    <td colspan="2">
+    <button type="button" class="btn" onclick="checkdata();" id="submit">登  录</button>
+    </td>
+    </tr>
+    </table>
+     </form>
+    </div>
+    </td>
+    <td width="43" height="1" align="left" rowspan="2">
+    </td>
+    <td width="45" height="1" align="left" valign="top" rowspan="2">
+    </td>
+  </tr>
+</table>
+
+</td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>

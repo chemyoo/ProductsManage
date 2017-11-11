@@ -1,0 +1,122 @@
+@CHARSET "UTF-8";
+/*
+Template Name: Educational
+File: Layout CSS
+Author: OS Templates
+Author URI: #
+Licence: <a href="#">Website Template Licence</a>
+*/
+
+body{
+	margin:0;
+	padding:0;
+	font-size:15px;
+	font-family:verdana, Arial, Helvetica, sans-serif;
+	color:#333333;
+	background-color:#E5E2C9;
+	}
+
+img{display:block; margin:0; padding:0; border:none;}
+.justify{text-align:justify;}
+.bold{font-weight:bold;}
+.center{text-align:center;}
+.right{text-align:right;}
+.nostart {list-style-type:none; margin:0; padding:0;}
+
+a{outline:none; text-decoration:none;}
+
+.fl_left{float:left;}
+.fl_right{float:right;}
+
+
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+div.wrapper{
+	display:block;
+	width:100%;
+	margin:0;
+	padding:0;
+	text-align:left;
+	}
+
+div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wrapper h6{
+	margin:0;
+	padding:0;
+	font-size:20px;
+	font-weight:normal;
+	line-height:normal;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	}
+
+.col0{color:#313131; background-color:#F8F7DF; border-top:5px solid #313131;}
+.col1, .col1 a{color:#8B785F; background-color:#F8F7DF;}
+.col4 a{color:#746550; background-color:#F8F7DF;}
+.col5{color:#CCCCCC; background-color:#48282F;}
+.col5 a{color:#E5E2C9; background-color:#48282F;}
+
+/* ----------------------------------------------Generalise-------------------------------------*/
+
+#header{
+	position:relative;
+	margin:0 auto 0;
+	display:block;
+	width:1250px;
+	}
+
+/* ----------------------------------------------Header-------------------------------------*/
+
+#header{
+	padding:0 0 0 0;
+	}
+
+#header #logo{
+	display:block;
+	float:left;
+	width:300px;
+	overflow:hidden;
+	}
+
+#header #logo h1, #header p, #header ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	line-height:normal;
+	}
+
+#header #logo h1{
+	font-size:36px;
+	}
+
+#header h1 a{
+	color:#333333;
+	background-color:#F8F7DF;
+	}
+
+#header .fl_right{
+	display:block;
+	float:right;
+	width:330px;
+	margin:17px 0 0 0;
+	padding:0;
+	text-align:right;
+	}
+
+#header .fl_right ul{
+	margin-bottom:10px;
+	}
+
+#header li{
+	display:inline;
+	margin:0 0 0 8px;
+	padding:0 0 0 10px;
+	border-left:1px solid #8B785F;
+	}
+
+#header li.last{
+	margin-right:0;
+	padding-right:0;
+	border:none;
+	}
+
+
+

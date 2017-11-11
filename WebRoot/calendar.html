@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<style>
+*{list-style:0;border:0;margin: 0;}
+.content{border:1px solid #ddd;margin:0 auto;}
+.datetable{text-align:center;}
+.datetable td{text-align:center;}
+.datetable thead{background:#006600;}
+.datetable thead td{padding:5px 5px;font:normal 8px/normal 'microsoft yahei';color:#fff;text-align:center;}
+.datetable thead td span{padding:0 1px;}
+.datetable tbody td{padding:3px 3px;font-size:8px;}
+.datetable tbody td select{border:0px; border-color:#0C6;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>动态日历</title> 
+<script type="text/jscript" src="js/DynamicCalendar.js"></script>
+</head>
+<body onload="initial()" bgcolor="#E5E2C9">
+<form name='CLD'>
+<table>
+  <TR>
+    <TD align=middle ><div id='time'></div>
+      <TABLE border=0 cellpadding="0" cellspacing="0" class="datetable" ><!--bordercolordark="#FFFFFF" bordercolor="#ffffff" bordercolorlight="#EEEEEE"-->
+        <TR bgcolor="red">
+          <TD colSpan=7 ><FONT color=#ffffff style="FONT-SIZE: 8pt">
+            <SELECT name=SY id="year" onchange=changeCld() style="FONT-SIZE: 6pt;" disabled="disabled"> 
+            <SCRIPT language="JavaScript">
+            for(i=1900;i<2101;i++) document.write('<option>'+i);
+            </SCRIPT>
+            </SELECT> 年 <SELECT name=SM  id="month"onchange=changeCld() style="FONT-SIZE: 6pt;" disabled="disabled"> 
+            <SCRIPT language="JavaScript">
+            for(i=1;i<13;i++) document.write('<option>'+i);
+            </SCRIPT>
+            </SELECT> 月 </FONT> 
+            <FONT color=#ffffff face=宋体 id=GZ style="FONT-SIZE: 8pt"></FONT>
+            </TD>
+        </TR>
+        <TR align=middle bgColor=#e0e0e0>
+          <TD style="font-size:8pt"><font color="red">日</font></TD>
+          <TD style="font-size:8pt">一</TD>
+          <TD style="font-size:8pt">二</TD>
+          <TD style="font-size:8pt">三</TD>
+          <TD style="font-size:8pt">四</TD>
+          <TD style="font-size:8pt">五</TD>
+          <TD style="font-size:8pt"><font color="red">六</font></TD></TR>
+          <SCRIPT language="JavaScript">
+            var gNum;
+            for(i=0;i<6;i++) {
+               document.write('<tr align=center>');
+               for(j=0;j<7;j++) 
+               {
+               	  gNum = i*7+j;
+				  document.write('<td id="GD' + gNum +'"><font id="SD' + gNum +'" size=2 face="Arial Black"');
+				  if(j == 0||j == 6) document.write(' color=red');
+				  //if(j == 6) document.write(' color=#000080');
+				  document.write(' TITLE=""> </font><br><font id="LD' + gNum + '" size=2 style="font-size:9pt"> </font></td>');	  
+               }
+               document.write('</tr>');
+            }
+           </SCRIPT>
+        </TABLE>
+</TD>
+  </TR>
+</TABLE>
+</FORM>
+</BODY>
+</HTML>

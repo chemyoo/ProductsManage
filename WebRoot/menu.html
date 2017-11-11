@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品管理系统</title>
+<link rel="shortcut icon" href="image/favicon.ico" sizes="48*48" />
+<link rel="stylesheet" href="css/css.css" />
+<link rel="stylesheet" type="text/css" href="css/bodycss.css"/>
+<script type="text/javascript" src="js/sdmenu.js"></script>
+<script type="text/javascript" src="js/jquery1.9.0.min.js"></script>
+
+</head>
+
+<body bgcolor="#E5E2C9">     
+<div id="middle">
+     <div class="left">
+     
+				 <script type="text/javascript">
+                 	var myMenu;
+          		  window.onload = function() {
+               		 myMenu = new SDMenu("my_menu");
+                	myMenu.init();
+           			 };
+	</script>
+
+<div id="my_menu" class="sdmenu">
+	<div >
+		<span>用户须知</span>
+		<a href="view.html" target="content">系统介绍</a>
+	</div>
+	<div class="collapsed">
+		<span>仓库管理</span>
+		<a href="storelist" target="content">查看仓库</a>
+		<a href="/ProductsManage/AddStore.html" target="content">添加仓库</a>
+	</div>
+	<div class="collapsed">
+		<span>分区管理</span>
+		 <a href="arealist" target="content">管理仓库分区</a>
+
+	</div>
+    
+ 	<div class="collapsed">
+		<span>出库管理</span>
+		<a href="checkoutlist" target="content">出库清单</a>
+		<a href="addcheckout" target="content">添加出库单</a>
+		<a href="checkoutHistory" target="content">查看历史出库单</a>
+
+	</div>
+ 	<div class="collapsed">
+		<span>入库管理</span>
+		   <a href="checklist" target="content">入库清单</a>
+		   <a href="addcheckin" target="content">添加入库单</a>
+		   <a href="checkinHistory" target="content">查看历史入库单</a>
+
+	</div>
+
+ 	<div class="collapsed">
+		<span>商品管理</span>
+		<a href="productlist" target="content">商品查询</a>
+		<a href="getdataTo" target="content">添加商品</a>
+
+	</div>
+ 	
+ 	<div class="collapsed">
+		<span>系统管理</span>
+		<a href="loglist" target="content">操作日志</a>
+		<a href="sysuserlist" target="content">用户管理</a>
+		<a href="/ProductsManage/Addsys_user.htm" target="content">添加用户</a>
+		<a href="recycalbin" target="content">回收站</a>
+		<a href="logout" target="_top">退出登入</a>
+	</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AddStore.html</title>
+	 <meta name="content-type" content="text/html; charset=UTF-8">
+	 <link rel="shortcut icon" href="image/favicon.ico" sizes="48*48" />
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <link rel="stylesheet" type="text/css" href="css/bodycss.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="js/jquery1.9.0.min.js"></script>
+	<script type="text/javascript" src="js/ValidateStore.js"></script>
+
+  </head>
+  
+  <body>
+  <div><hr color="#8B785F"></div>
+   <div class="p_left">
+    <form name="storeinfo" action="addstore.action" method="post" onsubmit="return returnflag();" >
+    	<table>
+    		<tr>
+    			<td>仓库编码：</td><td><input type="text" name="code" id="code"/></td><td><span id="message1"></span></td>
+    		</tr>
+    		<tr>
+    			<td>仓库名称：</td><td><input type="text" name="name" id="name"/></td><td><span id="message2"></span></td>
+    		</tr>
+    		<tr>
+	   			<td colspan="4">
+	   				<input class="btn" type="submit" value="确定"/>
+	   				<input class="btn" type="reset" value="重置"/>
+	   			</td>
+    		</tr>
+    	</table>
+    </form>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){ 
+    check.inintEvent(); /*方法绑定到输入框*/
+}); 
+$(document).ready(function(){ 
+    checkcode.inintEvent(); /*方法绑定到输入框*/
+}); 
+</script>
+ </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>商品管理系统</title>
+<link rel="shortcut icon" href="image/favicon.ico" sizes="48*48" />
+<link rel="stylesheet" type="text/css" href="css/bodycss.css"/>
+<noscript>
+ <div align="center"><font size=+1 color="red">
+ <p>
+您好，您的浏览器禁用了脚本，为了保障浏览效果，
+建议您先开启脚本功能。
+</p>
+</font></div>
+</noscript>
+</head>
+<frameset rows="9%,*"  bordercolor="#ff0000" frameborder="no" framespacing="0"> 
+	<frame name="head" src="head.jsp" scrolling="no" noresize='true'/> <!-- 上面头部子页面 -->
+	<frameset cols="280,*" frameborder="no" framespacing="0">
+		<frameset rows="340,*">
+			<frame name="mydate" src="calendar.html" scrolling="no" noresize="true"/>
+	    	<frame name="menu" src="menu.html" bordercolor="#E5E2C9"/> <!--  下面左侧菜单子页面-->
+	    </frameset>
+	    <frameset rows="*,30">
+	    	<frame name="content" src="default.jsp"/>    <!--  下面右侧内容子页面-->
+	    	<frame name="foot" src="foot.html" scrolling="no" noresize='true'/>
+	    </frameset>
+	</frameset> 
+</frameset>
+</html>

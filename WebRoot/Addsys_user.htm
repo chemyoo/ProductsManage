@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>添加用户</title>
+	<meta name="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <link rel="shortcut icon" href="image/favicon.ico" sizes="48*48" />
+    <link rel="stylesheet" type="text/css" href="css/bodycss.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="js/ValidateStore.js"></script>
+    <script type="text/javascript" src="js/jquery1.9.0.min.js"></script>
+  <script type="text/javascript">
+  function onconfim()
+  {
+  	   var selects=document.getElementsByName("question");
+  	   var message=document.getElementById("message");
+  	   var username=document.getElementsByName("username");
+	   var answer=document.getElementsByName("answer");
+  	   message.innerHTML="";
+	   setstyle(selects,username,answer);
+  	   if(selects[0].value==selects[1].value
+  	   	||selects[0].value==selects[2].value
+  	   	||selects[1].value==selects[2].value)
+  	   	{
+  	   		message.style="color:red";
+  	   		message.innerHTML="密保问题不能相同!";
+  	   		return false;
+  	   	}
+  	   	else if(!/^[0-9a-zA-Z]*$/.test(username[0].value))
+  	   	{
+  	   		message.style="color:red";
+  	   		message.innerHTML="用户名只能由数字字母组成!";
+  	   		return false;
+  	   	}
+  	   	else if(username[0].value=="")
+  	   	{
+  	   		message.style="color:red";
+  	   		message.innerHTML="用户名必须填写!";
+  	   		return false;
+  	   	}
+  	   	else if(answer[0].value==""||answer[2].value==""||answer[1].value=="")
+  	   	{
+  	   		message.style="color:red";
+  	   		message.innerHTML="答案都必须填写!";
+  	   		return false;
+  	   	}
+  	   	else
+  	   	    return true;
+  }
+  function setstyle(selects,username,answer)
+  {
+  	selects[0].style="border-color:none";
+  	selects[1].style="border-color:none";
+  	selects[2].style="border-color:none";
+  	username[0].style="border-color:none";
+  	answer[0].style="border-color:none";
+  	answer[1].style="border-color:none";
+  	answer[2].style="border-color:none";
+  	if(selects[0].value==selects[1].value)
+  	{
+  		selects[0].style="border-color:red;";
+  	    selects[1].style="border-color:red;";
+  	}
+  	else if(selects[0].value==selects[2].value)
+  	{
+  		selects[0].style="border-color:red;";
+  	    selects[2].style="border-color:red;";
+  	}
+  	else if(selects[1].value==selects[2].value)
+  	{
+  		selects[1].style="border-color:red;";
+  	    selects[2].style="border-color:red;";
+  	}
+  	else if(username[0].value=="")
+  		username[0].style="border-color:red;";
+   	else if(answer[0].value=="")
+  	{
+  		answer[0].style="border-color:red;";
+  	}
+  	else if(answer[1].value=="")
+  	{
+  		answer[1].style="border-color:red;";
+  	}
+  	else if(answer[2].value=="")
+  	{
+  		answer[2].style="border-color:red;";
+  	} 
+  }
+  </script>
+  </head>
+  
+  <body>
+  <div><hr color="#8B785F"></div>
+   <div class="p_left">
+    <form action="addsysuser.action" method="post" onsubmit="return onconfim();">
+	    <table>
+		    <tr>
+		    	<td>用户名：</td><td><input border="1" name="username" type="text""/></td><td><span id="message0"></span></td>
+		    </tr>
+			<tr>
+			    <td>密保问题1：</td>
+			    <td>
+			    	<select width="160" height="30" name="question" onchange="onconfim();">
+			    		<option value="0">我的电话号码？</option>
+			    		<option value="1">我的名字？</option>
+			    		<option value="2">我最好的朋友？</option>
+			    		<option value="3">我最喜欢的颜色？</option>
+			    		<option value="4">我最爱的人？</option>
+			    		<option value="5">座右铭？</option>
+			    		<option value="6">我的QQ号？</option>
+			    		<option value="7">我初中学校名称？</option>
+			    		<option value="8">我最喜欢做的事？</option>
+			    		<option value="9">我最讨厌做的事？</option>
+			    	</select>
+			    </td>
+		    <tr>
+		    	<td>答案1：</td><td><input name="answer" type="text" /></td>
+		    </tr>
+		    </tr>
+		    <tr>
+			    <td>密保问题2：</td>
+			    <td>
+			    	<select width="160" height="30" name="question" onchange="onconfim();">
+			    		<option value="0">我的电话号码？</option>
+			    		<option value="1" selected="selected">我的名字？</option>
+			    		<option value="2">我最好的朋友？</option>
+			    		<option value="3">我最喜欢的颜色？</option>
+			    		<option value="4">我最爱的人？</option>
+			    		<option value="5">座右铭？</option>
+			    		<option value="6">我的QQ号？</option>
+			    		<option value="7">我初中学校名称？</option>
+			    		<option value="8">我最喜欢做的事？</option>
+			    		<option value="9">我最讨厌做的事？</option>
+			    	</select>
+			    </td>
+		    </tr>
+		     <tr>
+		    	<td>答案2：</td><td><input name="answer" type="text" /></td>
+		    </tr>
+		    <tr>
+			    <td>密保问题3：</td>
+			    <td>
+			    	<select width="160" height="30" name="question" onchange="onconfim();">
+			    		<option value="0">我的电话号码？</option>
+			    		<option value="1">我的名字？</option>
+			    		<option value="2" selected="selected">我最好的朋友？</option>
+			    		<option value="3">我最喜欢的颜色？</option>
+			    		<option value="4">我最爱的人？</option>
+			    		<option value="5">座右铭？</option>
+			    		<option value="6">我的QQ号？</option>
+			    		<option value="7">我初中学校名称？</option>
+			    		<option value="8">我最喜欢做的事？</option>
+			    		<option value="9">我最讨厌做的事？</option>
+			    	</select>
+			    </td>
+		    </tr>
+		     <tr>
+		    	<td>答案3：</td><td><input name="answer" type="text" /></td>
+		    </tr>
+		    <tr>
+		    	<td colspan="2" height="20"><span id="message"></span></td>
+		    </tr>
+		    <tr>
+		    	<td colspan="2">
+		    		<input class="btn" type="submit" value="确定"/>
+		    		<input class="btn" type="reset" value="重置"/>
+		    	</td>
+		    </tr>
+	    </table>
+    </form>
+</div>
+ <script type="text/javascript">
+$(document).ready(function(){ 
+    account.inintEvent(); /*方法绑定到输入框*/
+}); 
+</script>
+  </body>
+</html>

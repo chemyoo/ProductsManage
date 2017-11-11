@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="usermanage" extends="struts-default" namespace="/">
+		<action name="sysuserlist" class="com.chemyoo.action.listaction.SysUserListAction">
+			<result name="success">/WEB-INF/jsp/admin/UserManage.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="delete" class="com.chemyoo.opration.DelUserAction">
+			<result name="success" type="redirectAction">sysuserlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="forbidden" class="com.chemyoo.opration.ForbiddenAction">
+			<result name="success" type="redirectAction">sysuserlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="available" class="com.chemyoo.opration.AvailableAction">
+			<result name="success" type="redirectAction">sysuserlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="productlist" class="com.chemyoo.action.listaction.ProductListAction">
+			<result name="success">/WEB-INF/jsp/pages/Productlist.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="arealist" class="com.chemyoo.action.listaction.AreaListAction">
+			<result name="success">/WEB-INF/jsp/pages/Arealist.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="checklist" class="com.chemyoo.action.listaction.CheckinListAction">
+			<result name="success">/WEB-INF/jsp/pages/Checklist.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="checkoutlist" class="com.chemyoo.action.listaction.CheckoutListAction">
+			<result name="success">/WEB-INF/jsp/pages/Checkoutlist.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="loglist" class="com.chemyoo.action.listaction.LogListAction">
+			<result name="success">/WEB-INF/jsp/pages/Loglist.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="storelist" class="com.chemyoo.action.listaction.StoreListAction">
+			<result name="success">/WEB-INF/jsp/pages/Storeslist.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="addsysuser" class="com.chemyoo.opration.Addsysuser">
+			<result name="success">/WEB-INF/jsp/pages/MyTip.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="edituser" class="com.chemyoo.opration.Editsysuser">
+			<result name="success">/WEB-INF/jsp/pages/Edituser.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="editsuccess" class="com.chemyoo.opration.Editsysusersuccess">
+			<result name="success" type="redirectAction">sysuserlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="addproduct" class="com.chemyoo.opration.AddProductSave">
+			<result name="success" type="redirectAction">productlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="getdataTo" class="com.chemyoo.opration.AddProductgetData">
+			<result name="success">/WEB-INF/jsp/pages/Addproduct.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="deletestore" class="com.chemyoo.opration.DeleteStore">
+			<result name="success" type="redirectAction">storelist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="undodel" class="com.chemyoo.opration.Undodel">
+			<result name="success" type="redirectAction">recycalbin</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="recycalbin" class="com.chemyoo.opration.RecycalbinPage">
+			<result name="success">/WEB-INF/jsp/pages/RecycleBin.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="clearlog" class="com.chemyoo.opration.ClearLog">
+			<result name="success" type="redirectAction">recycalbin</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="addarea" class="com.chemyoo.opration.AddStoreArea">
+			<result name="success" type="redirectAction">arealist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="deletearea" class="com.chemyoo.opration.DeleteStoreArea">
+			<result name="success" type="redirectAction">arealist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		<action name="delpro" class="com.chemyoo.opration.DeleteProduct">
+			<result name="success" type="redirectAction">productlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="editpro" class="com.chemyoo.opration.EditProduct">
+			<result name="success">/WEB-INF/jsp/pages/EditProduct.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="SaveEditProduct" class="com.chemyoo.opration.SaveEditProduct">
+			<result name="success" type="redirectAction">productlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="addstore" class="com.chemyoo.opration.AddStore">
+			<result name="success" type="redirectAction">storelist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="toQrCode" class="com.chemyoo.function.ToQrCode">
+			<result name="success" type="redirectAction">productlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		<action name="login" class="com.chemyoo.action.LoginAction">
+			<result name="success">/main.html</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		
+		<action name="addcheckin" class="com.chemyoo.opration.CheckInOrOutAction" method="AddCheckIn">
+			<result name="success">/WEB-INF/jsp/pages/addcheckin.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		<action name="logout" class="com.chemyoo.opration.CheckInOrOutAction" method="Exit">
+			<result name="success">/welcome.html</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		<action name="savecheckin" class="com.chemyoo.opration.CheckInOrOutAction" method="saveCheckin">
+			<result name="success" type="redirectAction">checklist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		<action name="addcheckout" class="com.chemyoo.opration.CheckInOrOutAction" method="AddCheckOut">
+			<result name="success">/WEB-INF/jsp/pages/addcheckout.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		<action name="savecheckout" class="com.chemyoo.opration.CheckInOrOutAction" method="saveCheckout">
+			<result name="success" type="redirectAction">checkoutlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="checkinsure" class="com.chemyoo.opration.CheckInOrOutAction" method="checkinSure">
+			<result name="success" type="redirectAction">checklist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="checkoutsure" class="com.chemyoo.opration.CheckInOrOutAction" method="checkoutSure">
+			<result name="success" type="redirectAction">checkoutlist</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		<action name="checkoutHistory" class="com.chemyoo.opration.CheckInOrOutAction" method="outHistory">
+			<result name="success">/WEB-INF/jsp/pages/outHistory.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		<action name="checkinHistory" class="com.chemyoo.opration.CheckInOrOutAction" method="inHistory">
+			<result name="success">/WEB-INF/jsp/pages/inHistory.jsp</result>
+			<result name="fail">/pleaselogin.jsp</result>
+			<result name="message">/WEB-INF/jsp/message.jsp</result>
+		</action>
+		
+		
+	</package>
+	
+	
+	<package name="default" namespace="/" extends="json-default"><!--用ajax要此extends-->
+
+			<action name="checkdata" class="com.chemyoo.ajax.servlet.AjaxServlet" method="checkName" > 
+			<result type="json">
+			<!-- root的值对应要返回的值的属性,这里的result值即是 对应action中的属性result,也即ajax中的返回值data --> 
+			<param name="root">checkresult</param> 
+			</result> 
+			</action>
+			
+			<action name="checkdatacode" class="com.chemyoo.ajax.servlet.AjaxServlet" method="checkCode" > 
+			<result type="json">
+			<!-- root的值对应要返回的值的属性,这里的result值即是 对应action中的属性result,也即ajax中的返回值data --> 
+			<param name="root">checkresult</param> 
+			</result> 
+			</action>
+			
+			<action name="checkaccount" class="com.chemyoo.ajax.servlet.AjaxServlet" method="checkAccount" > 
+			<result type="json">
+			<!-- root的值对应要返回的值的属性,这里的result值即是 对应action中的属性result,也即ajax中的返回值data --> 
+			<param name="root">checkresult</param> 
+			</result> 
+			</action>
+			
+			<action name="logincheck" class="com.chemyoo.ajax.servlet.LoginCheck" method="checkLogin" > 
+			<result type="json">
+			<!-- root的值对应要返回的值的属性,这里的result值即是 对应action中的属性result,也即ajax中的返回值data --> 
+			<param name="root">checkresult</param> 
+			</result> 
+			</action>
+			
+			<action name="proquerylike" class="com.chemyoo.opration.QueryLike" method="returnData" > 
+			<result type="json">
+			<!-- root的值对应要返回的值的属性,这里的result值即是 对应action中的属性result,也即ajax中的返回值data --> 
+			<param name="root">checkresult</param> 
+			</result> 
+			</action>
+		
+	</package>
+		
+</struts>

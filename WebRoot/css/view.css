@@ -1,0 +1,27 @@
+
+body{
+	margin:0;
+	padding:0;
+	font-size:12px;
+	font-family:verdana, Arial, Helvetica, sans-serif;
+	color:#333333;
+	background-color:#E5E2C9;
+	}
+	
+/* ----------------------------------------------School-------------------------------------*/
+#page2{
+        z-index: 2;
+        position: relative;
+        width: 800px;
+		margin:auto;
+        padding: 20px;
+        background: #000000;
+        font-size: 13px;
+        color: #FF9;
+        opacity: 0.5;
+        -moz-opacity: 0.5;
+        filter: alpha(opacity=50);
+		
+    }
+    P.larger-size { font-size: 16px; }
+    #page strong { color: #FFFFFF; }

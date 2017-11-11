@@ -1,0 +1,36 @@
+<!--
+MyEclipse Database Explorer Driver Repository
+-->
+
+<Beans version="1.0">
+    <Bean Class="net.sourceforge.squirrel_sql.fw.sql.SQLDriver">
+        <driverClassName>oracle.jdbc.OracleDriver</driverClassName>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>803af41:1513f1d34d3:-7f4d</string>
+        </identifier>
+        <jarFileName/>
+        <jarFileNames Indexed="true">
+            <Bean Class="net.sourceforge.squirrel_sql.fw.util.beanwrapper.StringWrapper">
+                <string>D:\MyEclipse Professional\Workspaces\JavaPrj_17\WebRoot\WEB-INF\lib\ojdbc6.jar</string>
+            </Bean>
+        </jarFileNames>
+        <name>Oracle (Thin driver)0</name>
+        <url>jdbc:oracle:thin:@&lt;server&gt;[:&lt;1521&gt;]:&lt;database_name&gt;</url>
+    </Bean>
+    <Bean Class="com.genuitec.eclipse.sqlexplorer.utils.ConnectionProfile">
+        <activate>true</activate>
+        <driverIdentifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>803af41:1513f1d34d3:-7f4d</string>
+        </driverIdentifier>
+        <identifier Class="net.sourceforge.squirrel_sql.fw.id.UidIdentifier">
+            <string>803af41:1513f1d34d3:-7f03</string>
+        </identifier>
+        <name>OracleDrivver</name>
+        <password encryption="true">+87R4SQ28Hg=</password>
+        <promptForPassword>false</promptForPassword>
+        <schema Indexed="true"/>
+        <schemaDisplayPolicy>0</schemaDisplayPolicy>
+        <url>jdbc:oracle:thin:@127.0.0.1:1521:Chemyoo</url>
+        <userName>hr</userName>
+    </Bean>
+</Beans>
