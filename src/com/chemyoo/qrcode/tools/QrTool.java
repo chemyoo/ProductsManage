@@ -31,7 +31,7 @@ public class QrTool {
 		File file = new File(realpath+"/QR_CODE");
 		if(!file.exists())
 		{
-			file.mkdir();
+			file.mkdirs();
 		}
 		String filepath = file.getAbsolutePath()+"/";
 		String dir=filepath+picname+".jpg";
@@ -60,7 +60,7 @@ public class QrTool {
 		
 		System.out.println("二维码生成完成");
 		
-		System.out.println("生成路径："+realpath);
+		System.out.println("生成路径："+filepath);
 		if(n!=0)
 			System.out.println("文件名："+picname+"("+n+").jpg");
 		else
@@ -70,8 +70,11 @@ public class QrTool {
 		
 		//System.out.println(text);
 		
-		
+	}
 	
+	public static void main(String args[])
+	{
+		QrTool.transToQrcode("HTTPS://QR.ALIPAY.COM/FKX08178ZCDKQPVHQVSSF8", "支付二维码", "D:\\");
 	}
 
 }
